@@ -16,6 +16,9 @@ router.get('/', async (req, response) => {
         console.log(res.data);
         const convertedResponse = convert.xml2js(res.data);
         response.json(convertedResponse);
+      })
+      .catch((err) => {
+        console.log('Some Error Occured', err);
       });
   } catch (error) {
     console.error(error);
