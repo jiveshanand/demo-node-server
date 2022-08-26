@@ -19,6 +19,7 @@ router.get('/', async (req, response) => {
       })
       .catch((err) => {
         console.log('Some Error Occured', err);
+        res.status(500).send('Nasdaq error');
       });
   } catch (error) {
     console.error(error);
